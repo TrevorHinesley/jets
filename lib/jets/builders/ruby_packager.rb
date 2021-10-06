@@ -169,9 +169,9 @@ module Jets::Builders
       # Replace things like nokogiri (1.11.1-x86_64-darwin) => nokogiri (1.11.1)
       lines, new_lines = new_lines, []
       lines.each do |l|
-        if l.include?("-x86_64-darwin")
-          l = l.sub('-x86_64-darwin','')
-        end
+#         if l.include?("-x86_64-darwin")
+#           l = l.sub('-x86_64-darwin','')
+#         end
         new_lines << l
       end
 
