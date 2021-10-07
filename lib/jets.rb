@@ -23,6 +23,7 @@ require "serverlessgems"
 
 module Jets
   MAX_FUNCTION_NAME_SIZE = 64
+  UNUSED_VARIABLE_TO_TEST = 1
 
   class Error < StandardError; end
   extend Core # root, logger, etc
