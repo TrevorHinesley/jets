@@ -172,6 +172,10 @@ module Jets::Builders
         if l.include?("-x86_64-darwin")
           l = l.sub('-x86_64-darwin','')
         end
+
+        if l.include?("-x86_64-linux")
+          l = l.sub('-x86_64-linux','')
+        end
         new_lines << l
       end
 
