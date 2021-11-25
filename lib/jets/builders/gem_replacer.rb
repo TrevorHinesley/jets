@@ -33,7 +33,7 @@ module Jets::Builders
       src = Dir.glob(expr).first
       return unless src
 
-      dest = src.sub("-darwin", "").sub("-linux", "")
+      dest = src.sub(/-x.*-(darwin|linux)/, "")
       FileUtils.mv(src, dest) unless File.exist?(dest) # looks like rename_gem actually runs twice
     end
 
